@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Xodimlar boshqaruvi</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <div class="top">
+      <div class="title">
+        <h1>Xodimlar boshqaruvi</h1>
+      </div>
+      <div class="controls">
+        <input
+          id="searchName"
+          type="search"
+          placeholder="Ism bo'yicha qidirish"
+        />
+        <select id="gender">
+          <option value="all">Hammasi</option>
+          <option value="male">Erkak</option>
+          <option value="female">Ayol</option>
+        </select>
+        <select id="isMarried">
+          <option value="all">Hammasi</option>
+          <option value="married">Oilali</option>
+          <option value="unmarried">Yolg'iz</option>
+        </select>
+        <button id="addOpenModal">+ Yangi xodim</button>
+      </div>
+    </div>
+
+    <div id="workers" class="employees"></div>
+
+    <div id="modal-backdrop" class="modal-backdrop">
+      <div class="modal">
+        <h2>Yangi xodim qo'shish</h2>
+        <div class="field">
+          <label>Ism</label>
+          <input id="name" type="text" placeholder="To'liq ism" />
+        </div>
+        <div class="field">
+          <label>Telefon</label>
+          <input id="tel" type="text" placeholder="+998..." />
+        </div>
+        <div class="field">
+          <label>Jinsi</label>
+          <input id="genderInput" type="checkbox" />
+        </div>
+        <div class="field">
+          <label>Oilaviy holati</label>
+          <input id="isMarriedInput" type="checkbox" />
+        </div>
+        <div class="buttons">
+          <button id="cancel" class="cancel">Bekor qilish</button>
+          <button id="postWorker" class="save">Saqlash</button>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
